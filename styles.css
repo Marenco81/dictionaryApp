@@ -1,14 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+:root{
+    --bg-main: #11224E;
+    --bg-secondary: #F87B1B;
+    --main-heading: #CBD99B;
+    --secondary-heading: #EEEEEE;
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 *:not(i){
     font-family: "Poppins", sans-serif;
 }
 
 body{
-    background-color: #11224E;
+    background-color: var(--bg-main);
+}
+
+.container{
+    background-color: var(--secondary-heading);
+    width: 90vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+    & .search-box{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        & input{
+            padding: 5px;
+            width: 70%;
+            border: none;
+            outline: none;
+            border-bottom: 3px solid var(--main-heading);
+            font-size: 1.6rem;
+        }
+        & button{
+            padding: 10px 0;
+            width: 25%;
+            background-color: var(--main-heading);
+            border: none;
+            outline: none;
+            color: var(--secondary-heading);
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+    }
+    & .result{
+        position: relative;
+        & h3{
+            font-size: 3rem;
+        }
+        & .word{
+            display: flex;
+            justify-content: space-between;
+            color: var(--bg-secondary);
+            margin-top: 50px;
+        }
+        & button{
+            background-color: transparent;
+            color: var(--bg-secondary);
+            border: none;
+            outline: none;
+            font-size: 3rem;
+        }
+        & button:hover{
+            transform: scale(1.2);
+        }
+        & .details{
+            display: flex;
+            gap: 10px;
+            color: var(--bg-main);
+            margin: 5px 0 20px 0;
+            font-size: 1.6rem;
+        }
+        & .word-meaning{
+            color: var(--bg-main);
+            font-size: 1.6rem;
+        }
+        & .word-example{
+            color: var(--bg-main);
+            font-size: 1.2rem;
+            font-style: italic;
+            border-left: 2px solid var(--bg-main);
+            padding-left: 20px;
+            margin-top: 15px;
+
+        }
+    }
 }
