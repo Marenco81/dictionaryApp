@@ -47,13 +47,17 @@ body{
         & button{
             padding: 10px 0;
             width: 25%;
-            background-color: var(--main-heading);
+            background-color: #7c855f;
             border: none;
             outline: none;
             color: var(--secondary-heading);
             font-size: 1.6rem;
             font-weight: 500;
             border-radius: 5px;
+        }
+        & button:hover{
+            background-color: var(--main-heading);
+            color: #11224E;
         }
     }
     & .result{
@@ -82,7 +86,7 @@ body{
             gap: 10px;
             color: var(--bg-main);
             margin: 5px 0 20px 0;
-            font-size: 1.6rem;
+            font-size: 2.1rem;
         }
         & .word-meaning{
             color: var(--bg-main);
@@ -97,5 +101,10 @@ body{
             margin-top: 15px;
 
         }
+    }
+    & .error{
+        margin-top: 45px;
+        color: var(--bg-secondary);
+        text-align: center;
     }
 }
